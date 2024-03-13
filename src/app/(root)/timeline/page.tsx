@@ -22,7 +22,7 @@ const Page = () => {
                         visible={true}
                         className="vertical-timeline-element--work"
                         contentStyle={{
-                            background: "rgb(33, 150, 243)",
+                            background: "transparent",
                             color: "#fff",
                         }}
                         contentArrowStyle={{
@@ -35,17 +35,17 @@ const Page = () => {
                         }}
                         icon={<IoCodeWorkingOutline />}
                     >
-                        <div className=" relative flex justify-center items-center flex-col">
-                            <h1 className="font-bold text-2xl">
+                        <div className=" relative p-4 rounded-md flex justify-center items-center flex-col ">
+                            <h1 className="font-bold z-10 text-2xl">
                                 {timeline.title}
                             </h1>
-                            <p className=" font-light text-sm">
+                            <p className=" font-light z-10 text-sm">
                                 {timeline.data}
                             </p>
                             <img
                                 src={timeline.image}
                                 alt="image"
-                                className="absolute w-full h-full "
+                                className="absolute rounded-md z-0 w-full h-full "
                             />
                         </div>
                     </VerticalTimelineElement>
