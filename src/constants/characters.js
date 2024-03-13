@@ -12,7 +12,7 @@ export const characterArr = [
     {
         name: "Iron Man",
         real_name: "Tony Stark",
-        img: "/characters/ca.avif",
+        img: "/characters/im.png",
         description:
             "Tony Stark, also known as Iron Man, is a genius billionaire inventor, industrialist, and playboy. After being kidnapped and building a powered suit of armor to escape, he becomes a superhero. Using his intellect and technology, Iron Man fights crime and global threats.",
         trivia: "Tony Stark's character was inspired by the Howard Hughes archetype. His first suit, the Mark I armor, was built with spare parts in a cave while he was held captive by terrorists.",

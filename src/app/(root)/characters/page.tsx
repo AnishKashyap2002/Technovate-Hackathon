@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const Page = () => {
     return (
-        <div className="flex justify-center flex-wrap gap-5 p-5">
+        <div className="flex justify-center flex-wrap gap-5 p-5 bg-gradient-to-r from-slate-950 to-slate-800">
             {characterArr.map((character) => (
 
-                <article className="relative group isolate flex flex-col justify-end shadow-lg shadow-black overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-[350px] mx-auto mt-4 h-[400px] ">
+                <article className="relative group isolate flex flex-col bg-gradient-to-r from-slate-400 to-slate-600 justify-end shadow-lg shadow-slate-800 overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-[350px] mx-auto mt-4 h-[400px]">
                     <span className="relative text-white text-sm justify-end opacity-0 line-clamp-2 transition ease-in-out duration-400 delay-100 group-hover:opacity-100 z-10 object-cover">{character.description}</span>
                     <a
                         href={`/characters/${character.name.split(" ").join("_")}`}
