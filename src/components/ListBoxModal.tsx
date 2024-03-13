@@ -29,9 +29,9 @@ export default function ListBoxModal({
             signOut();
         } else if (route == "/profile") {
             //@ts-ignore
-            const { id } = data;
+            const { _id } = data;
 
-            router.push(`${route}/${id}`);
+            router.push(`${route}/${_id}`);
         } else {
             router.push(route);
         }
