@@ -11,7 +11,7 @@ const characterArr = [
     {
         name: "Iron Man",
         real_name: "Tony Stark",
-        img: "/characters/ca.jpg",
+        img: "/characters/im.jpg",
         description: "Tony Stark, also known as Iron Man, is a genius billionaire inventor, industrialist, and playboy. After being kidnapped and building a powered suit of armor to escape, he becomes a superhero. Using his intellect and technology, Iron Man fights crime and global threats.",
         trivia: "Tony Stark's character was inspired by the Howard Hughes archetype. His first suit, the Mark I armor, was built with spare parts in a cave while he was held captive by terrorists.",
         powers: "Iron Man's suit grants him superhuman strength, flight, enhanced durability, and an array of weapons and gadgets."
@@ -29,7 +29,7 @@ const characterArr = [
     {
         name: "Hulk",
         real_name: "Bruce Banner",
-        img: "/characters/ca.jpg",
+        img: "/characters/hl.jpg",
         description: "Bruce Banner, also known as the Hulk, is a brilliant scientist who, after being exposed to gamma radiation, transforms into a raging green behemoth when angered. The Hulk possesses immense strength and near-invulnerability, making him one of the most powerful beings in the Marvel Universe.",
         trivia: "The Hulk's alter ego, Bruce Banner, is constantly struggling to control his anger and prevent the Hulk from causing destruction. The character's catchphrase is 'Hulk smash!'",
         powers: "The Hulk possesses superhuman strength, durability, and regeneration. His strength increases with his anger, and he can leap great distances."
@@ -38,7 +38,7 @@ const characterArr = [
     {
         name: "Spider-Man",
         real_name: "Peter Parker",
-        img: "/characters/ca.jpg",
+        img: "/characters/sm.jpg",
         description: "Peter Parker, also known as Spider-Man, is a high school student who gains spider-like abilities after being bitten by a radioactive spider. He uses his powers to fight crime and protect New York City as the friendly neighborhood superhero, Spider-Man.",
         trivia: "Spider-Man's motto is 'With great power comes great responsibility,' a lesson he learned from his Uncle Ben. He is known for his witty banter and acrobatic fighting style.",
         powers: "Spider-Man has superhuman strength, agility, and reflexes. He can cling to walls, has a 'spider-sense' that warns him of danger, and uses web-shooters to swing between buildings."
