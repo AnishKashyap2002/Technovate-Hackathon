@@ -90,10 +90,20 @@ export type PostType = {
 export type PollType = {
     _id: string;
     title: string;
+    user: UserType;
     options: {
         name: string;
         votes: Number;
     }[];
     voters: UserType[];
     createdAt: Date;
+};
+
+export type CharacterType = {
+    name: string;
+    description: string;
+    real_img: string;
+    trivia: string;
+    powers: string;
+    img: string;
 };

@@ -1,14 +1,17 @@
+"use client";
+
 import { getUserById } from "@/actions/getUserById";
 import React from "react";
 import bg from "@/../public/bg-sky.jpg";
 import Image from "next/image";
 import userImage from "@/../public/user.jpeg";
-import { User } from "@/types";
+import { CharacterType, UserType } from "@/types";
+import { getCharacterById } from "@/actions";
 
 const page = async ({ params }: { params: { id: string } }) => {
     const { id } = params;
-    const user = (await JSON.parse(await getUserById(id))) as User;
-    // console.log(user);
+    const character = getCharacterById(id);
+    console.log(id);
     return (
         <div className="">
             <div className=" relative w-full h-[150px] z-[-1]">
@@ -23,7 +26,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                 <div className={`  p-1 bg-white z-20 rounded-full`}>
                     <div className="p-2 bg-white relative rounded-full  h-[150px] w-[150px]">
                         <Image
-                            src={user.image || userImage}
+                            src={character?.img || userImage}
                             alt="user"
                             fill
                             className="object-cover rounded-full"
@@ -33,10 +36,19 @@ const page = async ({ params }: { params: { id: string } }) => {
 
                 <div className="flex flex-col items-center">
                     <div className="font-bold text-gray-900 text-2xl">
-                        {user.name}
+                        {character?.name}
                     </div>
                     <div className="font-medium text-gray-600  text-sm">
-                        {user.bio}
+                        {character?.powers}
+                    </div>
+                    <div className="font-medium text-gray-600  text-sm">
+                        {character?.description}
+                    </div>
+                    <div className="font-medium text-gray-600  text-sm">
+                        {character?.real_name}
+                    </div>
+                    <div className="font-medium text-gray-600  text-sm">
+                        {character?.trivia}
                     </div>
                 </div>
             </div>

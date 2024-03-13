@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import Connection from "@/lib/connectDB";
 import { getServerSession } from "next-auth";
+import Poll from "@/lib/poll";
 import User from "@/lib/user";
-import { User as UserType } from "@/types";
-import Discussion from "@/lib/discussion";
+import { UserType } from "@/types";
 
 export async function POST(request: Request) {
     Connection();
@@ -11,18 +11,18 @@ export async function POST(request: Request) {
 
     const session = await getServerSession();
 
-    const { topic, hashtags } = body;
+    const { title, options } = body;
 
     const user = (await User.findOne({
         email: session?.user?.email,
     })) as UserType;
 
-    const discussion = await Discussion.create({
-        topic,
-        owner: user._id,
-        hashtags,
+    const poll = await Poll.create({
+        user: user._id,
+        title,
+        options,
     });
 
-    discussion.save();
-    return NextResponse.json(discussion);
+    poll.save();
+    return NextResponse.json(poll);
 }
