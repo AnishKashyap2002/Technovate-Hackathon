@@ -14,7 +14,7 @@ import path from "../../../../public/timeline/10th.webp";
 
 const Page = () => {
     return (
-        <div className="bg-gray-700">
+        <div className = "bg-gradient-to-r from-slate-950 to-slate-800">
             <VerticalTimeline className="">
                 {timelineArr.map((timeline) => (
                     <VerticalTimelineElement
