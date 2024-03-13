@@ -66,7 +66,7 @@ export type UserType = {
     hashedPassword: string;
     bio: string;
     image: string;
-    coins: Number;
+    coins: number;
     inventory: string[];
 };
 
@@ -87,13 +87,20 @@ export type PostType = {
     createdAt: Date;
 };
 
+export type OptionType = {
+    _id: string;
+    name: string;
+    votes: number;
+};
+
 export type PollType = {
     _id: string;
     title: string;
     user: UserType;
     options: {
+        _id: string;
         name: string;
-        votes: Number;
+        votes: number;
     }[];
     voters: UserType[];
     createdAt: Date;
