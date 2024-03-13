@@ -25,6 +25,7 @@ const Page = () => {
                             background: "transparent",
                             color: "#fff",
                         }}
+                        style={{border:"none"}}
                         contentArrowStyle={{
                             borderRight: "7px solid  rgb(33, 150, 243)",
                         }}
@@ -35,19 +36,13 @@ const Page = () => {
                         }}
                         icon={<IoCodeWorkingOutline />}
                     >
-                        <div className=" relative p-4 rounded-md flex justify-center items-center flex-col ">
-                            <h1 className="font-bold z-10 text-2xl">
-                                {timeline.title}
-                            </h1>
-                            <p className=" font-light z-10 text-sm">
-                                {timeline.data}
-                            </p>
-                            <img
-                                src={timeline.image}
-                                alt="image"
-                                className="absolute rounded-md z-0 w-full h-full "
-                            />
-                        </div>
+                        <article className="relative group isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-[500px] mx-auto mt-24 h-[600px] ">
+                            <span className="absolute opacity-0 transition duration-300 delay-100 group-hover:opacity-100 z-10 object-cover">{timeline.data}</span>
+                            <img src={timeline.image} alt="Image" className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:blur-sm" />
+                            <div className="absolute inset-0 transition duration-300 delay-100 bg-gradient-to-t from-gray-900 via-gray-900/40 group-hover:from-gray-950 group-hover:via-gray-950"/>
+                            <h3 className="z-10 mt-3 text-3xl font-bold text-white group-hover:invisible transition-opacity">{timeline.title}</h3>
+                            <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 group-hover:invisible ">{timeline.date}</div>
+                        </article>
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
