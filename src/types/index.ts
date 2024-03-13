@@ -60,38 +60,38 @@
 // };
 
 export type UserType = {
-    _id: String;
-    name: String;
-    email: String;
-    hashedPassword: String;
-    bio: String;
-    image: String;
+    _id: string;
+    name: string;
+    email: string;
+    hashedPassword: string;
+    bio: string;
+    image: string;
     coins: Number;
-    inventory: String[];
+    inventory: string[];
 };
 
 export type CommentType = {
-    _id: String;
-    data: String;
+    _id: string;
+    data: string;
     user: UserType;
     createdAt: Date;
 };
 
 export type PostType = {
-    _id: String;
-    title: String;
-    data: String;
-    image: String;
+    _id: string;
+    title: string;
+    data: string;
+    image: string;
     user: UserType;
     comments: CommentType[];
     createdAt: Date;
 };
 
 export type PollType = {
-    _id: String;
-    title: String;
+    _id: string;
+    title: string;
     options: {
-        name: String;
+        name: string;
         votes: Number;
     }[];
     voters: UserType[];
