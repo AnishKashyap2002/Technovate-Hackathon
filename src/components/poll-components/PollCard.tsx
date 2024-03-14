@@ -68,11 +68,14 @@ const PollCard = ({ poll, user_id }: { poll: PollType; user_id: string }) => {
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{newPoll?.user?.name}  {poll?.createdAt.toString().slice(0, 10)}</p>
             <div className="flex justify-center  gap-10 p-5" >
                 {newPoll?.options.map((option, i) => (
+                   <div key = {Math.random()} className="flex flex-col justify-center" >
                     <a href="#" className=" text-center p-4 w-[200px] text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 z-10 font-medium rounded-lg  text-sm"
                         onClick={() => handleClick(option, i)}
                     >
                         {option.name}
                     </a>
+                    <span className="text-center text-white font-bold">  {option.votes}</span>
+                    </div>
                 ))}
             </div>
             <div className="h-[300px] w-[300px]">

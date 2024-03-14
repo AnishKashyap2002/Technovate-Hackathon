@@ -8,9 +8,15 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { timelineArr } from "@/constants/timeline";
-import imag from "@/../public/timeline/10th.webp";
-import user from "@/../public/timeline/11ca.jpg";
-import path from "../../../../public/timeline/10th.webp";
+import  imag from "@/../public/avenger.svg"
+import { FaBoltLightning } from "react-icons/fa6";
+
+
+const Icon = () => {
+    return (
+        <img src={imag} alt="image" />
+    )
+}
 
 const Page = () => {
     return (
@@ -27,14 +33,14 @@ const Page = () => {
                         }}
                         style={{border:"none"}}
                         contentArrowStyle={{
-                            borderRight: "7px solid  rgb(33, 150, 243)",
+                            borderRight: "7px solid  #9f31e8",
                         }}
-                        date={timeline.date}
+                        
                         iconStyle={{
-                            background: "rgb(33, 150, 243)",
+                            background: "#9f31e8",
                             color: "#fff",
                         }}
-                        icon={<IoCodeWorkingOutline />}
+                        icon={<FaBoltLightning />}
                     >
                         <article className="relative group isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-[500px] mx-auto mt-24 h-[600px] ">
                             <span className="absolute opacity-0 transition duration-300 delay-100 group-hover:opacity-100 z-10 object-cover">{timeline.data}</span>

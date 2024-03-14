@@ -51,7 +51,7 @@ export default function ListBoxModal({
         >
             <Menu.Button
                 as="div"
-                className="flex gap-2 items-center cursor-pointer bg-black hover:text-white text-slate-200 px-4 py-2 rounded- md  "
+                className="flex gap-2 items-center cursor-pointer bg-transparent hover:text-white text-slate-200 px-4 py-2 rounded- md  "
             >
                 <div className="flex gap-4 items-center w-full">
                     <div className="flex items-center">
