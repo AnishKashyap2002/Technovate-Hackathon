@@ -22,7 +22,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="">
+        <main className="bg-gradient-to-r from-slate-950 to-slate-800 object-cover">
             <PollsAll pollls={polls} />
         </main>
     );

@@ -15,12 +15,12 @@ type ExpandNavbarProps = {
 
 const ExpandNavbar = ({ navLinks }: ExpandNavbarProps) => {
     return (
-        <div className="flex items-center gap-2 z-50">
+        <div className="flex items-center">
             {navLinks.map((link) => (
                 <a
                     href={link.href}
                     key={link.title + "expand"}
-                    className="flex gap-1 px-4 rounded-md py-2 hover:text-white cursor-pointer text-slate-200 bg-black items-center"
+                    className="flex px-4 h-full rounded-md text-white bg-gradient-to-b from-transparent to-transparent p-4 hover:from-fuchsia-600 hover:to-purple-600"
                 >
                     <div className="text-2xl ">{link.icon}</div>
                     <div className="text-sm font-semibold">{link.title}</div>
@@ -34,7 +34,7 @@ const Navbar = () => {
     const session = useSession();
 
     return (
-        <div className="flex bg-[#ff9f0d] justify-between z-50   gap-4 items-center px-4 py-2">
+        <div className="flex bg-gradient-to-r from-slate-900 to-slate-700 justify-between items-center px-4">
             <div className="hidden sm:block">
                 <ExpandNavbar navLinks={navLinks} />
             </div>

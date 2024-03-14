@@ -9,8 +9,7 @@ const PollsAll = ({ pollls }: { pollls: PollType[] }) => {
 
     return (
         <>
-            <div className="min-h-screen mt-4 ">
-                <div className="flex justify-center text-2xl">Recent polls</div>
+            <div className=" p-5 ">
                 <div className="flex flex-col gap-4 items-center">
                     {pollls.map((poll: PollType) => (
                         <PollCard
@@ -22,7 +21,6 @@ const PollsAll = ({ pollls }: { pollls: PollType[] }) => {
                     ))}
                 </div>
                 <PollButton />
-                Kade vich nahi pawaya
             </div>
         </>
     );
