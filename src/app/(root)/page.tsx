@@ -25,10 +25,10 @@ export default function Home() {
                     <div className="flex items-center flex-col gap-4">
                         <div className="">
                             <h1 className="font-bold text-[60px]">
-                                Discover the world of marvel
+                                Avengers, Assemble!
                             </h1>
                             <p className="font-light">
-                                Explore the vast and major world of fantasies..
+                                Explore the world of Avengers and Connect with other fans.
                             </p>
                         </div>
                         <p className="bg-purple-700 z-20   text-white rounded-md p-4">
