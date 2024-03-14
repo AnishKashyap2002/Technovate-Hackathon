@@ -34,8 +34,8 @@ export const navLinks = [
         icon: <LiaPollSolid />,
     },
     {
-        title: "Posts",
-        href: "/posts",
+        title: "Shop",
+        href: "/shop",
         icon: <MdOutlineLocalPostOffice />,
     },
 ];

@@ -114,3 +114,11 @@ export type CharacterType = {
     powers: string;
     img: string;
 };
+
+export type ItemType = {
+    name: string;
+    cost: number;
+    info: string;
+    rarity: number;
+    image: string;
+};

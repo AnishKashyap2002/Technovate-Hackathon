@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 .component {
     display: flex;
@@ -144,18 +144,12 @@
 .inputGroup input:focus ~ label,
 .inputGroup input:valid ~ label {
     top: 5px;
-}
-
-/* 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+} */
 
 .hero {
-    background-image: url("Assets/14avg.avif");
+    background-image: url("/timeline/14avg.avif");
     background-position: center;
+
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -165,6 +159,7 @@ body {
     position: absolute;
     top: 20%;
     left: 35%;
+
     opacity: 0.85;
     background-color: rgba(23, 13, 13, 0.9);
     border-radius: 20px;
@@ -188,10 +183,6 @@ body {
     }
 }
 
-h1 {
-    text-align: center;
-}
-
 .border {
     outline: none;
 }
@@ -204,7 +195,7 @@ h1 {
     color: #ffffff;
 }
 
-.form-group {
+.formGroup {
     margin-bottom: 25px;
 }
 .inline {
@@ -220,13 +211,13 @@ h1 {
     margin-bottom: 10px;
 }
 
-.form-group label {
+.formGroup label {
     display: block;
     margin-bottom: 5px;
     color: #fffdfd;
 }
 
-.form-group input {
+.formGroup input {
     width: calc(100% - 20px);
     padding: 10px;
     font-size: 16px;
@@ -234,7 +225,7 @@ h1 {
     border-radius: 5px;
 }
 
-.form-group button {
+.formGroup button {
     margin-left: 140px;
     background-color: #b60909;
     color: white;
@@ -246,7 +237,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.form-group button:hover {
+.formGroup button:hover {
     background-color: #157423;
 }
 
@@ -265,7 +256,7 @@ h1 {
     cursor: pointer;
 }
 
-.avengers-gradient {
+.avengersGradient {
     background: linear-gradient(to right, #2c435b, #1b1919);
     opacity: 0.9;
 }
@@ -278,8 +269,8 @@ h1 {
         max-width: 60%;
     }
 
-    .form-group button {
+    .formGroup button {
         margin-left: 50%;
         transform: translateX(-50%);
     }
-} */
+}

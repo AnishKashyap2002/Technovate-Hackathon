@@ -9,6 +9,7 @@ import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Session } from "next-auth";
+import { RiCoinsLine } from "react-icons/ri";
 
 type useSessionProps = {
     data: Session | undefined | null;
@@ -52,21 +53,33 @@ export default function ListBoxModal({
                 as="div"
                 className="flex gap-2 items-center cursor-pointer bg-black hover:text-white text-slate-200 px-4 py-2 rounded- md  "
             >
-                <div className=" relative  h-[30px] w-[30px] rounded-full bg-green-400 ">
-                    {" "}
-                    <Image
-                        // @ts-ignore
-                        src={data?.image}
-                        alt=""
-                        className="object-fit rounded-full"
-                        fill
-                    />
-                </div>
+                <div className="flex gap-4 items-center w-full">
+                    <div className="flex items-center">
+                        <span className="text-yellow-700 font-medium text-sm">
+                            {
+                                // @ts-ignore
+                                data?.coins
+                            }
+                        </span>
+                        <RiCoinsLine className="text-yellow-700 font-extrabold text-xl" />
+                    </div>
 
-                {/* @ts-ignore */}
-                <span>{data?.name}</span>
-                <div className="">
-                    <IoMdArrowDropdown />
+                    <div className=" relative  h-[30px] w-[30px] rounded-full bg-green-400 ">
+                        {" "}
+                        <Image
+                            // @ts-ignore
+                            src={data?.image}
+                            alt=""
+                            className="object-fit rounded-full"
+                            fill
+                        />
+                    </div>
+
+                    {/* @ts-ignore */}
+                    <span>{data?.name}</span>
+                    <div className="">
+                        <IoMdArrowDropdown />
+                    </div>
                 </div>
             </Menu.Button>
             <Transition

@@ -28,7 +28,7 @@ export default function ArcReactor(props) {
                     <group
                         name="35988332074843e89a7f3e081ed48c1afbx"
                         rotation={[Math.PI / 2, 0, 0]}
-                        scale={0.05}
+                        scale={0.06}
                     >
                         <group name="Object_2">
                             <group name="RootNode">
