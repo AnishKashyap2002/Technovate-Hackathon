@@ -31,9 +31,11 @@ export default function Home() {
                                 Explore the world of Avengers and Connect with other fans.
                             </p>
                         </div>
-                        <p className="bg-purple-700 z-20   text-white rounded-md p-4">
+                        <a href = "/timeline">
+                        <p className="bg-purple-700 text-white rounded-md p-4 hover:scale-105 transition duration-300 delay-100">
                             Get Started
                         </p>
+                        </a>
                     </div>
                 </div>
                 <Scene i={0} />

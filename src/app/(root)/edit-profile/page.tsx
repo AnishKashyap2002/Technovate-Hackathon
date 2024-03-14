@@ -6,7 +6,7 @@ const page = async () => {
     // console.log(user, "use details");
 
     return (
-        <div className="">
+        <div className="bg-gradient-to-r from-slate-950 to-slate-800">
             <EditUserDetails user={user} />
         </div>
     );
