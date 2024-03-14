@@ -22,7 +22,7 @@ export const characterArr = [
     {
         name: "Black Widow",
         real_name: "Natasha Romanoff",
-        img: "/characters/black-widow.jpg",
+        img: "/characters/black-widow.png",
         description:
             "Natasha Romanoff, also known as Black Widow, is a highly trained spy, assassin, and former agent of S.H.I.E.L.D. She is skilled in hand-to-hand combat, espionage, and marksmanship. Black Widow is a key member of the Avengers, using her expertise to fight against threats to humanity.",
         trivia: "Black Widow was trained in the Red Room, a secretive Soviet program that molded young girls into skilled operatives. She defected to S.H.I.E.L.D. and later joined the Avengers.",
@@ -42,7 +42,7 @@ export const characterArr = [
     {
         name: "Spider-Man",
         real_name: "Peter Parker",
-        img: "/characters/sm.jpg",
+        img: "/characters/spider-man.png",
         description:
             "Peter Parker, also known as Spider-Man, is a high school student who gains spider-like abilities after being bitten by a radioactive spider. He uses his powers to fight crime and protect New York City as the friendly neighborhood superhero, Spider-Man.",
         trivia: "Spider-Man's motto is 'With great power comes great responsibility,' a lesson he learned from his Uncle Ben. He is known for his witty banter and acrobatic fighting style.",
@@ -52,7 +52,7 @@ export const characterArr = [
     {
         name: "Thor",
         real_name: "Thor Odinson",
-        img: "/characters/thor.jpg",
+        img: "/characters/thor.png",
         description:
             "Thor Odinson is the Norse God of Thunder and a member of the Asgardian royal family. He wields the enchanted hammer Mjolnir and possesses the power of lightning. Thor is a mighty warrior and a founding member of the Avengers, dedicated to defending the Nine Realms from threats.",
         trivia: "In Norse mythology, Thor is the son of Odin, the Allfather, and is associated with thunder, lightning, and storms. He is depicted as a fierce warrior with a magical hammer.",
@@ -62,7 +62,7 @@ export const characterArr = [
     {
         name: "Black Panther",
         real_name: "T'Challa",
-        img: "/characters/black-panther.jpg",
+        img: "/characters/black-panther.png",
         description:
             "T'Challa, also known as Black Panther, is the king of the African nation of Wakanda. He is a skilled warrior and possesses enhanced strength, speed, and agility due to ingesting the heart-shaped herb. Black Panther is also a genius inventor and strategist, leading Wakanda into a technologically advanced society.",
         trivia: "Wakanda is the only known source of vibranium, a valuable and nearly indestructible metal. Black Panther's suit is made of vibranium, providing him with enhanced protection and offensive capabilities.",
@@ -72,7 +72,7 @@ export const characterArr = [
     {
         name: "Doctor Strange",
         real_name: "Stephen Strange",
-        img: "/characters/doctor-strange.jpg",
+        img: "/characters/doctor-strange.png",
         description:
             "Stephen Strange, a former neurosurgeon, becomes the Sorcerer Supreme known as Doctor Strange after a car accident leaves his hands injured. Seeking a cure, he discovers the mystic arts under the guidance of the Ancient One. Doctor Strange protects Earth from magical and mystical threats, using spells and artifacts to defend reality.",
         trivia: "Doctor Strange is known for his distinctive hand gestures and spells, often accompanied by mystical symbols. He wields the Eye of Agamotto, a powerful artifact capable of manipulating time and revealing truth.",
@@ -82,7 +82,7 @@ export const characterArr = [
     {
         name: "Star-Lord",
         real_name: "Peter Quill",
-        img: "/characters/star-lord.jpg",
+        img: "/characters/star-lord.png",
         description:
             "Peter Quill, also known as Star-Lord, is the leader of the Guardians of the Galaxy. He is a charismatic and resourceful space adventurer who wields advanced technology and is skilled in combat and piloting. Star-Lord is known for his sense of humor and roguish charm.",
         trivia: "Star-Lord is half-human and half-Celestial, granting him enhanced abilities and a connection to the cosmos. He inherited his title of Star-Lord from his father, Ego the Living Planet.",
@@ -92,7 +92,7 @@ export const characterArr = [
     {
         name: "Gamora",
         real_name: "Gamora",
-        img: "/characters/gamora.jpeg",
+        img: "/characters/gamora.png",
         description:
             "Gamora is a former assassin and member of the Guardians of the Galaxy. She is the adopted daughter of the intergalactic warlord Thanos and was raised to be a deadly warrior. Gamora seeks redemption for her past actions and fights alongside the Guardians to protect the galaxy.",
         trivia: "Gamora is known as the deadliest woman in the galaxy. She was once known as the favorite daughter of Thanos but later rebelled against him.",
