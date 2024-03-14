@@ -44,8 +44,10 @@ export default function Home() {
                     What do we offer
                 </h1>
                 <div className="flex justify-between flex-col sm:flex-row items-center">
-                    <div className="">
-                        <div className="font-bold text-[30px]">Arc Reactor</div>
+                    <div className="flex flex-col gap-4">
+                        <div className="font-bold text-[40px] text-purple-700">
+                            Arc Reactor
+                        </div>
                         <p className="w-full">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Tempora dolores minima nesciunt perspiciatis,
@@ -56,8 +58,8 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row  items-center">
                     <Scene i={2} />
-                    <div className="">
-                        <div className="font-bold text-[30px]">
+                    <div className="flex flex-col gap-2">
+                        <div className="font-bold text-[40px] text-purple-700">
                             Hydra Helmet
                         </div>
                         <p className="w-full">
