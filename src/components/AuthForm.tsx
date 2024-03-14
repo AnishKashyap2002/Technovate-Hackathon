@@ -297,7 +297,7 @@ const AuthForm = () => {
                                 >
                                     Don't have an account?{" "}
                                     <span
-                                        className={`${styles.signUpBtnLink} text-pink-700`}
+                                        className={`${styles.signUpBtnLink} text-purple-700 font-bold`}
                                     >
                                         Sign Up{" "}
                                     </span>
