@@ -2,7 +2,7 @@ export const characterArr = [
     {
         name: "Captain America",
         real_name: "Steve Rogers",
-        img: "/characters/ca.avif",
+        img: "/characters/captain-america-upscaled.png",
         description:
             "Captain America is a symbol of patriotism and heroism in the Marvel Universe. He is a super-soldier who fought in World War II and continues to defend freedom and justice in the modern world. Steve Rogers is known for his unwavering courage, leadership skills, and sense of duty.",
         trivia: "In the Marvel Cinematic Universe, Captain America's shield is made of vibranium, a rare and nearly indestructible metal. It was given to him by Howard Stark, Tony Stark's father, during World War II.",
