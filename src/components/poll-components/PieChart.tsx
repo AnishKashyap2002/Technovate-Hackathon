@@ -41,7 +41,7 @@ const PieChart = ({
     };
 
     return (
-        <div>
+        <div className="  ">
             {/* Render a Pie chart using provided data and options */}
             {/* <Pie
                 data={data}
@@ -50,8 +50,8 @@ const PieChart = ({
             /> */}
             <Pie
                 data={data}
-                width={75}
-                height={25}
+                width={"100%"}
+                height={"100%"}
             />
         </div>
     );

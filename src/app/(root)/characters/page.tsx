@@ -15,7 +15,9 @@ const Page = () => {
                         href={`/characters/${character.name.split(" ").join("_")}`}
                         key={character.name}
                     >
-                        <button type="button" className="absolute  opacity-0 group-hover:opacity-100 mt-6 ml-44 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 z-10 font-medium rounded-lg  text-sm px-5 py-2.5 text-center me-2 mb-2">Read more</button>
+                        <button type="button" className="absolute opacity-0 group-hover:opacity-100 mt-6 ml-40 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 z-10 font-medium rounded-lg  text-sm px-5 py-2.5 text-center me-2 mb-2" >
+                            Read more
+                        </button>
                     </a>
                     <Image src={character.img} alt="Image" fill className="absolute inset-0 align-bottom h-full w-full object-cover transition ease-in-out duration-400 group-hover:blur-sm group-hover:scale-110" />
                     <div className="absolute inset-0 transition ease-in-out duration-400 delay-100 bg-gradient-to-t from-gray-900 via-gray-900/40 group-hover:from-gray-950 group-hover:via-gray-950" />
