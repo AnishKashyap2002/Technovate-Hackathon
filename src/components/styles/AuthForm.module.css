@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 .component {
     display: flex;
@@ -145,3 +145,141 @@
 .inputGroup input:valid ~ label {
     top: 5px;
 }
+
+/* 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-image: url("Assets/14avg.avif");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    opacity: 0.85;
+    background-color: rgba(23, 13, 13, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 100px 5px #000000;
+    max-width: 400px;
+    width: 100%;
+    animation: slide-up 1s ease-out;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 0.9;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.border {
+    outline: none;
+}
+.border:hover {
+    border: 2px solid #b60909;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+.inline {
+    display: flex;
+}
+.inline i {
+    color: #b60909;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.icon {
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fffdfd;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    margin-left: 140px;
+    background-color: #b60909;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #157423;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+.exisistingUser {
+    text-align: center;
+}
+.exisistingUser label {
+    color: whitesmoke;
+}
+.exisistingUser span:hover {
+    color: rgb(180, 180, 180);
+    cursor: pointer;
+}
+
+.avengers-gradient {
+    background: linear-gradient(to right, #2c435b, #1b1919);
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 449px) {
+    .box {
+        top: 25%;
+        left: 5%;
+        height: 430px;
+        max-width: 60%;
+    }
+
+    .form-group button {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+} */

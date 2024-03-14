@@ -318,7 +318,7 @@ const AuthForm = () => {
                                 </p>
                             </div>
                         )}
-                        <div className={styles.socialIcons}>
+                        {/* <div className={styles.socialIcons}>
                             <p className="text-white font-medium text-center">
                                 Or Sign in with
                             </p>
@@ -338,7 +338,7 @@ const AuthForm = () => {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </form>
                 </div>
             </div>

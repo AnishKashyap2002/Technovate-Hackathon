@@ -15,7 +15,7 @@ type ExpandNavbarProps = {
 
 const ExpandNavbar = ({ navLinks }: ExpandNavbarProps) => {
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 z-50">
             {navLinks.map((link) => (
                 <a
                     href={link.href}
@@ -34,7 +34,7 @@ const Navbar = () => {
     const session = useSession();
 
     return (
-        <div className="flex bg-[#ff9f0d] justify-between   gap-4 items-center px-4 py-2">
+        <div className="flex bg-[#ff9f0d] justify-between z-50   gap-4 items-center px-4 py-2">
             <div className="hidden sm:block">
                 <ExpandNavbar navLinks={navLinks} />
             </div>

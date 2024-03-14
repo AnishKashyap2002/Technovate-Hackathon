@@ -83,7 +83,7 @@ export default function ListBoxModal({
                         <div
                             key={link.title}
                             onClick={() => handleClick(link.href)}
-                            className="flex gap-2 cursor-pointer items-center text-sm  bg-black transition duration-200 hover:bg-gray-500 hover:text-white text-slate-200 rounded-md px-4 py-2"
+                            className="flex  z-[999] gap-2 cursor-pointer items-center text-sm  bg-black transition duration-200 hover:bg-gray-500 hover:text-white text-slate-200 rounded-md px-4 py-2"
                         >
                             <div className="font-bold text-2xl">
                                 {link.icon}
