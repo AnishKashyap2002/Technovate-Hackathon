@@ -32,7 +32,7 @@ export const characterArr = [
     {
         name: "Hulk",
         real_name: "Bruce Banner",
-        img: "/characters/hl.jpg",
+        img: "/characters/hulk.png",
         description:
             "Bruce Banner, also known as the Hulk, is a brilliant scientist who, after being exposed to gamma radiation, transforms into a raging green behemoth when angered. The Hulk possesses immense strength and near-invulnerability, making him one of the most powerful beings in the Marvel Universe.",
         trivia: "The Hulk's alter ego, Bruce Banner, is constantly struggling to control his anger and prevent the Hulk from causing destruction. The character's catchphrase is 'Hulk smash!'",
