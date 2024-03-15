@@ -12,12 +12,16 @@ const Fallback = () => {
     return <p className="text-black font-bold">Loading...</p>;
 };
 
-const ModelArray = [<Model />, <ArcReactor />, <HydraHelmet />, <Shield />];
+const ModelArray = [
+    <Model key={Math.random} />,
+    <ArcReactor key={Math.random} />,
+    <HydraHelmet key={Math.random()} />,
+    <Shield key={Math.random()} />,
+];
 
 const Scene = ({ i }: { i: number }) => {
     return (
         <Canvas
-            key={Math.random()}
             shadows
             style={i == 0 ? { height: "100vh" } : { height: "400px" }}
             className="absloute w-full z-20 "
