@@ -149,7 +149,7 @@
 } */
 
 .hero {
-    background-image: url("/timeline/14avg.avif");
+    background-image: url("./14avg.avif");
     background-position: center;
 
     background-size: cover;
