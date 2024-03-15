@@ -1,11 +1,9 @@
 "use client";
 
-import { getUserById } from "@/actions/getUserById";
 import React from "react";
 import bg from "@/../public/bg-sky.jpg";
 import Image from "next/image";
 import userImage from "@/../public/user.jpeg";
-import { CharacterType, UserType } from "@/types";
 import { getCharacterById } from "@/actions";
 
 const page = async ({ params }: { params: { id: string } }) => {

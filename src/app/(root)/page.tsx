@@ -1,9 +1,4 @@
 "use client";
-import { useState, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import ArcReactor from "../../../public/arc-reactor/Scene";
-
-import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const Scene = dynamic(() => import("../../components/Scene"), {
@@ -28,13 +23,14 @@ export default function Home() {
                                 Avengers, Assemble!
                             </h1>
                             <p className="font-light">
-                                Explore the world of Avengers and Connect with other fans.
+                                Explore the world of Avengers and Connect with
+                                other fans.
                             </p>
                         </div>
-                        <a href = "/timeline">
-                        <p className="bg-purple-700 text-white rounded-md p-4 hover:scale-105 transition duration-300 delay-100">
-                            Get Started
-                        </p>
+                        <a href="/timeline">
+                            <p className="bg-purple-700 text-white rounded-md p-4 hover:scale-105 transition duration-300 delay-100">
+                                Get Started
+                            </p>
                         </a>
                     </div>
                 </div>

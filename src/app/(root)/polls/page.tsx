@@ -1,11 +1,7 @@
 "use client";
 
-import { getPolls } from "@/actions";
 import PollsAll from "@/components/poll-components/PollsAll";
-import Navbar from "@/components/Navbar";
 import { PollType } from "@/types";
-import Connection from "@/lib/connectDB";
-import Poll from "@/lib/poll";
 import { useEffect, useState } from "react";
 import axios from "axios";
 

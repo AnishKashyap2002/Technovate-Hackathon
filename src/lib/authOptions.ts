@@ -5,7 +5,6 @@ import GoogledProvder from "next-auth/providers/google";
 import bcrypt from "bcrypt";
 import Connection from "@/lib/connectDB";
 import User from "@/lib/user";
-import { NextResponse } from "next/server";
 import { UserType } from "@/types";
 import { AuthOptions } from "next-auth";
 
