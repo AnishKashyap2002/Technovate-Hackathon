@@ -32,7 +32,7 @@ const AuthForm = () => {
 
     const [loading, setLoading] = useState(false);
 
-    const submitEvent = (e: FormEvent) => {
+    const submitEvent = async (e: FormEvent) => {
         e.preventDefault();
 
         if (!user.email || !user.password) {
@@ -45,7 +45,7 @@ const AuthForm = () => {
             setLoading(true);
             console.log(user);
             signIn("credentials", {
-                redirect: false,
+                callbackUrl: "/",
                 email: user.email,
                 password: user.password,
             }).then((response) => {
@@ -56,7 +56,7 @@ const AuthForm = () => {
                     setLoading(false);
                 } else if (response?.ok) {
                     toast.success("Signed In successfully");
-                    router.push("/");
+                    // router.push("/");
                 }
             });
         } else {
@@ -66,24 +66,32 @@ const AuthForm = () => {
             }
             setLoading(true);
 
-            axios
-                .post("/api/register", user)
+            await fetch("/api/register", {
+                method: "post",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+
+                //make sure to serialize your JSON body
+                body: JSON.stringify(user),
+            })
                 .then((response) => {
                     toast.success("User created successfully");
+
+                    console.log(response);
                     signIn("credentials", {
                         email: user.email,
+                        callbackUrl: "/",
                         password: user.password,
-                    }).then(() => {
-                        router.push("/");
                     });
                 })
-                .catch((error) => {
+                .catch(async (error) => {
                     toast.error("A problem occured");
                 })
                 .finally(() => {
                     setLoading(false);
                 });
-
             console.log("The data is ", user);
         }
     };
@@ -104,127 +112,128 @@ const AuthForm = () => {
 
     return (
         <>
-            <div className={styles.hero} />
-            <div className={`${styles.box} ${styles.avengersGradient}`}>
-                <div className={styles.container}>
-                    <h1 className="text-center font-bold text-2xl">
-                        {variant == "LOGIN" ? "Sign In" : "Sign Up"}
-                    </h1>
-                    <form
-                        id="signup-form"
-                        onSubmit={submitEvent}
-                        className={`${loading && "opacity-50"}`}
-                    >
-                        {variant == "REGISTER" && (
+            <div className={styles.hero}>
+                <div className={`${styles.box} ${styles.avengersGradient}`}>
+                    <div className={styles.container}>
+                        <h1 className="text-center font-bold text-2xl">
+                            {variant == "LOGIN" ? "Sign In" : "Sign Up"}
+                        </h1>
+                        <form
+                            id="signup-form"
+                            onSubmit={submitEvent}
+                            className={`${loading && "opacity-50"}`}
+                        >
+                            {variant == "REGISTER" && (
+                                <div className={styles.formGroup}>
+                                    <div className={styles.inline}>
+                                        {/* <i className={`${styles.fa-solid} ${styles.fa-user} `}></i> */}
+                                        <FaUserAlt className="text-2xl text-rose-500" />
+                                        <label
+                                            className={styles.icon}
+                                            htmlFor="username"
+                                        >
+                                            Username
+                                        </label>
+                                    </div>
+                                    <input
+                                        className={styles.border}
+                                        type="text"
+                                        id="username"
+                                        name="username"
+                                        required
+                                        onChange={(e) =>
+                                            setUser({
+                                                ...user,
+                                                username: e.target.value,
+                                            })
+                                        }
+                                        placeholder="Enter your name "
+                                    />
+                                </div>
+                            )}
                             <div className={styles.formGroup}>
                                 <div className={styles.inline}>
-                                    {/* <i className={`${styles.fa-solid} ${styles.fa-user} `}></i> */}
-                                    <FaUserAlt className="text-2xl text-rose-500" />
+                                    <MdOutlineMail className="text-2xl text-rose-500" />
                                     <label
                                         className={styles.icon}
-                                        htmlFor="username"
+                                        htmlFor="email"
                                     >
-                                        Username
+                                        Email
                                     </label>
                                 </div>
                                 <input
                                     className={styles.border}
-                                    type="text"
-                                    id="username"
-                                    name="username"
-                                    required
+                                    type="email"
+                                    id="email"
+                                    name="email"
                                     onChange={(e) =>
                                         setUser({
                                             ...user,
-                                            username: e.target.value,
+                                            email: e.target.value,
                                         })
                                     }
-                                    placeholder="Enter your name "
+                                    required
+                                    placeholder="Enter your email"
                                 />
                             </div>
-                        )}
-                        <div className={styles.formGroup}>
-                            <div className={styles.inline}>
-                                <MdOutlineMail className="text-2xl text-rose-500" />
-                                <label
-                                    className={styles.icon}
-                                    htmlFor="email"
-                                >
-                                    Email
-                                </label>
-                            </div>
-                            <input
-                                className={styles.border}
-                                type="email"
-                                id="email"
-                                name="email"
-                                onChange={(e) =>
-                                    setUser({
-                                        ...user,
-                                        email: e.target.value,
-                                    })
-                                }
-                                required
-                                placeholder="Enter your email"
-                            />
-                        </div>
-                        <div className={styles.formGroup}>
-                            <div className={styles.inline}>
-                                <MdPassword className="text-2xl text-rose-500" />
+                            <div className={styles.formGroup}>
+                                <div className={styles.inline}>
+                                    <MdPassword className="text-2xl text-rose-500" />
 
-                                {/* <i className={${styles.fa-solid} ${styles.fa-key}}></i> */}
-                                <label
-                                    className={styles.icon}
-                                    htmlFor="password"
-                                >
-                                    Password
-                                </label>
+                                    {/* <i className={${styles.fa-solid} ${styles.fa-key}}></i> */}
+                                    <label
+                                        className={styles.icon}
+                                        htmlFor="password"
+                                    >
+                                        Password
+                                    </label>
+                                </div>
+                                <input
+                                    className={styles.border}
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    onChange={(e) =>
+                                        setUser({
+                                            ...user,
+                                            password: e.target.value,
+                                        })
+                                    }
+                                    required
+                                    placeholder="Enter your password"
+                                />
+                                <div id="password-strength-meter"></div>
                             </div>
-                            <input
-                                className={styles.border}
-                                type="password"
-                                id="password"
-                                name="password"
-                                onChange={(e) =>
-                                    setUser({
-                                        ...user,
-                                        password: e.target.value,
-                                    })
-                                }
-                                required
-                                placeholder="Enter your password"
-                            />
-                            <div id="password-strength-meter"></div>
+                            <div className={styles.formGroup}>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                >
+                                    {variant == "LOGIN" ? "Sign In" : "Sign Up"}
+                                </button>
+                            </div>
+                        </form>
+                        <div
+                            className={styles.error}
+                            id="error"
+                        ></div>
+                        <div className={styles.exisistingUser}>
+                            {variant == "LOGIN" ? (
+                                <label
+                                    htmlFor=""
+                                    onClick={() => setVariant("REGISTER")}
+                                >
+                                    New User? <span>Sign Up</span>
+                                </label>
+                            ) : (
+                                <label
+                                    htmlFor=""
+                                    onClick={() => setVariant("LOGIN")}
+                                >
+                                    Already a user? <span>Sign in</span>
+                                </label>
+                            )}
                         </div>
-                        <div className={styles.formGroup}>
-                            <button
-                                type="submit"
-                                disabled={loading}
-                            >
-                                {variant == "LOGIN" ? "Sign In" : "Sign Up"}
-                            </button>
-                        </div>
-                    </form>
-                    <div
-                        className={styles.error}
-                        id="error"
-                    ></div>
-                    <div className={styles.exisistingUser}>
-                        {variant == "LOGIN" ? (
-                            <label
-                                htmlFor=""
-                                onClick={() => setVariant("REGISTER")}
-                            >
-                                New User? <span>Sign Up</span>
-                            </label>
-                        ) : (
-                            <label
-                                htmlFor=""
-                                onClick={() => setVariant("LOGIN")}
-                            >
-                                Already a user? <span>Sign in</span>
-                            </label>
-                        )}
                     </div>
                 </div>
             </div>

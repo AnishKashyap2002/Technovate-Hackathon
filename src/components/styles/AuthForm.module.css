@@ -154,20 +154,20 @@
 
     background-size: cover;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .box {
-    position: absolute;
-    top: 20%;
-    left: 35%;
-
     opacity: 0.85;
     background-color: rgba(23, 13, 13, 0.9);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 100px 5px #000000;
-    max-width: 400px;
+    max-width: 600px;
+    margin: 20px;
     width: 100%;
     animation: slide-up 1s ease-out;
     border: 1px solid rgb(255, 255, 255);
@@ -228,7 +228,9 @@
 }
 
 .formGroup button {
-    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     background-color: #b60909;
     color: white;
     padding: 10px 30px;
@@ -268,7 +270,7 @@
         top: 25%;
         left: 5%;
         height: 430px;
-        max-width: 60%;
+        width: 100%;
     }
 
     .formGroup button {

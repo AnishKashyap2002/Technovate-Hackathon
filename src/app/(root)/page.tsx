@@ -9,14 +9,14 @@ const Scene = dynamic(() => import("../../components/Scene"), {
 export default function Home() {
     return (
         <>
-            <main className="min-h-screen  bg-[url('https://tenor.com/bkh5R.gif')] bg-cover bg-center flex justify-between items-center   relative text-white">
+            <main className="min-h-screen  bg-[url('https://tenor.com/bkh5R.gif')] bg-cover bg-center flex justify-between flex-col sm:flex-row items-center   relative text-white">
                 <div className="bg-black opacity-70 absolute h-full w-full z-10" />
                 <img
                     src="/herobg.jpg"
                     alt="image"
                     className="absolute w-full h-full object-cover z-0"
                 />
-                <div className="w-full p-10 z-20">
+                <div className="w-full  p-10 z-20">
                     <div className="flex items-center flex-col gap-4">
                         <div className="">
                             <h1 className="font-bold text-[60px]">

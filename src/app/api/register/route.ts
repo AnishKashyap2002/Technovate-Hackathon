@@ -8,6 +8,7 @@ export async function POST(request: Request) {
     try {
         // console.log("it came", await request.json());
         Connection();
+
         const body = await request.json();
         const { email, username, password } = body;
         console.log(body);
