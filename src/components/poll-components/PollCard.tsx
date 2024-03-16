@@ -67,7 +67,7 @@ const PollCard = ({ poll, user_id }: { poll: PollType; user_id: string }) => {
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 {newPoll?.user?.name} {poll?.createdAt.toString().slice(0, 10)}
             </p>
-            <div className="flex justify-center  gap-10 p-5">
+            <div className="flex justify-center flex-wrap  gap-10 p-5">
                 {newPoll?.options.map((option, i) => (
                     <div
                         key={Math.random()}

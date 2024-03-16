@@ -42,7 +42,7 @@ const Page = () => {
                         }}
                         icon={<FaBoltLightning />}
                     >
-                        <article className="relative group isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-[500px] mx-auto mt-24 h-[600px] ">
+                        <article className="relative group isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 sm:w-[500px] sm:h-[500px]   mx-auto mt-24  ">
                             <span className="absolute opacity-0 transition duration-300 delay-100 group-hover:opacity-100 z-10 object-cover">
                                 {timeline.data}
                             </span>
