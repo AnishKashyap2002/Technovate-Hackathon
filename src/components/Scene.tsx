@@ -12,36 +12,39 @@ const Fallback = () => {
     return <p className="text-black font-bold">Loading...</p>;
 };
 
-const ModelArray = [<Model />, <ArcReactor />, <HydraHelmet />, <Shield />];
+const ModelArray = [
+    <Model key={Math.random} />,
+    <ArcReactor key={Math.random} />,
+    <HydraHelmet key={Math.random()} />,
+    <Shield key={Math.random()} />,
+];
 
 const Scene = ({ i }: { i: number }) => {
     return (
-        <>
-            <Canvas
-                shadows
-                style={i == 0 ? { height: "100vh" } : { height: "400px" }}
-                className="absloute w-full z-20 "
-                dpr={[1, 2]}
-                camera={{ position: [0, 0, 4], fov: 50 }}
-            >
-                <ambientLight intensity={0.7} />
-                <spotLight
-                    intensity={0.5}
-                    angle={0.1}
-                    penumbra={1}
-                    position={[10, 15, 10]}
-                    castShadow
-                />
-                <Suspense fallback={null}>
-                    {ModelArray[i]}
-                    <Environment preset="city" />
-                </Suspense>
-                <OrbitControls
-                    autoRotate
-                    enableZoom={false}
-                />
-            </Canvas>
-        </>
+        <Canvas
+            shadows
+            style={i == 0 ? { height: "100vh" } : { height: "400px" }}
+            className="absloute w-full z-20 "
+            dpr={[1, 2]}
+            camera={{ position: [0, 0, 4], fov: 50 }}
+        >
+            <ambientLight intensity={0.7} />
+            <spotLight
+                intensity={0.5}
+                angle={0.1}
+                penumbra={1}
+                position={[10, 15, 10]}
+                castShadow
+            />
+            <Suspense fallback={null}>
+                {ModelArray[i]}
+                <Environment preset="city" />
+            </Suspense>
+            <OrbitControls
+                autoRotate
+                enableZoom={false}
+            />
+        </Canvas>
     );
 };
 
